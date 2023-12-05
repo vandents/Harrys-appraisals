@@ -1,0 +1,7 @@
+ - Github
+ - captcha
+ - Github pages
+ - Home page
+ - Success stories page
+ - Contact page form validation
+ - Optimize for mobile
