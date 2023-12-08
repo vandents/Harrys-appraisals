@@ -1,1 +1,92 @@
-<p>home works!</p>
+<img src="assets/banner-1.jpg" class="banner">
+
+<h1>About us</h1>
+
+<p>
+  Welcome to Harry's Appraisals, your trusted partner for accurate and reliable automobile insurance appraisals.
+  At Harry's Appraisals, we understand the importance of precise valuation when it comes to your vehicle insurance needs.
+  Our team of experienced auto appraisers is dedicated to providing thorough and impartial assessments to ensure you
+  receive the coverage you deserve.
+</p>
+
+<h1 style="margin-top: 30px !important;">Our services</h1>
+
+<div class="services-wrapper">
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Insurance Appraisals</mat-card-title>
+        <img mat-card-lg-image src="assets/insurance-appraisals.jpg">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      We provide precise assessments of your vehicle's value for insurance purposes, ensuring accurate
+      coverage and efficient claims processing. Trust Harry's Appraisals for straightforward and reliable
+      automobile insurance appraisals. Connect with us today.
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Prior to Loss</mat-card-title>
+        <img mat-card-lg-image src="assets/prior-to-loss.jpg">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      Our service assesses the value of your vehicle before unforeseen events, preventing underinsurance.
+      We provide accurate, proactive valuations to optimize your insurance coverage, ensuring you're
+      prepared for the unexpected.
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="service-card">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>Custom and Collectible Car Appraisal</mat-card-title>
+        <img mat-card-lg-image src="assets/collectible.jpg">
+      </mat-card-title-group>
+    </mat-card-header>
+    <mat-card-content>
+      Whether you're insuring, buying, or selling, our expert appraisers provide accurate valuations
+      tailored to unique vehicles. Trust us to assess their true worth, considering factors like
+      modifications, rarity, and overall condition. Ensure you have the right coverage or make informed
+      decisions with Harry's Appraisals.
+    </mat-card-content>
+  </mat-card>
+
+</div>
+
+<h1 style="margin-top: 30px !important;">Contact us</h1>
+
+<table class="example-full-width" cellspacing="0">
+  <tr>
+    <td class="harrys-photo-td">
+      <img src="assets/harrys-photo.jpg" class="harrys-photo"/>
+    </td>
+    <td class="contact-td">
+      <div>
+        <h2 style="margin: 0; font-weight: 400;">Harold Bloomer</h2>
+        <div class="contact-div">
+          <img src="assets/phone-solid.svg" class="icon"/>
+          (269) 680-7706
+        </div>
+        <div style="display: flex;">
+          <img src="assets/envelope-solid.svg" class="icon"/>
+          appraisalsh&#64;gmail.com
+        </div>
+      </div>
+
+      <button mat-raised-button (click)="onContactClick()" color="accent"
+        class="contact-button" *ngIf="!deviceService.isMobile">
+        Request appraisal
+      </button>
+    </td>
+  </tr>
+</table>
+
+<div class="mobile-request-button" *ngIf="deviceService.isMobile">
+  <button mat-raised-button (click)="onContactClick()" color="accent" class="contact-button">
+    Request appraisal
+  </button>
+</div>
