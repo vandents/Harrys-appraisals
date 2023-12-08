@@ -13,3 +13,5 @@
  - Search result optimization
  X Theming
  - Update text on wins page
+
+run `find . -maxdepth 1 -exec mv {} .. \;` from within dist/browser
