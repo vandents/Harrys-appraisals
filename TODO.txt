@@ -1,7 +1,15 @@
- - Github
- - captcha
+ X Github
+ X captcha
+    - site key: 6LeoVScpAAAAAKuCnDegwdtBKewzR-w2X2MJmR9g
+    - secret key: 6LeoVScpAAAAAM4jmy-C5Des4-gvn-mMRrfOmsHP
+ X Home page
+ X Success stories page
+ X Footer
+ X Optimize for mobile
+ X Banner image
+ X Make cool and less boring
  - Github pages
- - Home page
- - Success stories page
  - Contact page form validation
- - Optimize for mobile
+ - Search result optimization
+ X Theming
+ - Update text on wins page
