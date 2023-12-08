@@ -1,0 +1,92 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$harrys-blue: (
+  50 : #e4e7eb,
+  100 : #bbc4cd,
+  200 : #8e9dac,
+  300 : #61768b,
+  400 : #3f5872,
+  500 : #1d3b59,
+  600 : #1a3551,
+  700 : #152d48,
+  800 : #11263e,
+  900 : #0a192e,
+  A100 : #699fff,
+  A200 : #367eff,
+  A400 : #035dff,
+  A700 : #0053e9,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #ffffff,
+    400 : #ffffff,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #ffffff,
+    A400 : #ffffff,
+    A700 : #ffffff,
+  )
+);
+
+$harrys-orange: (
+  50 : #f5ece8,
+  100 : #e7d0c6,
+  200 : #d7b1a0,
+  300 : #c7927a,
+  400 : #bb7a5e,
+  500 : #af6341,
+  600 : #a85b3b,
+  700 : #9f5132,
+  800 : #96472a,
+  900 : #86351c,
+  A100 : #ffcdc0,
+  A200 : #ffa58d,
+  A400 : #ff7d5a,
+  A700 : #ff6941,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+
+$my-primary: mat.define-palette($harrys-blue, 500);
+$my-accent: mat.define-palette($harrys-orange, 500);
+
+$my-theme: mat.define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0,
+));
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
+// Emit styles for MatButton based on `$my-theme`. Because the configuration
+// passed to `define-light-theme` omits typography, `button-theme` will not
+// emit any typography styles.
+@include mat.button-theme($my-theme);
+
+// Include the theme mixins for other components you use here.

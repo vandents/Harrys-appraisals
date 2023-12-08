@@ -1,6 +1,5 @@
 h1 {
   margin: 24px 0 24px 0;
-  font-size: 32px;
 }
 
 .example-full-width {
@@ -9,4 +8,132 @@ h1 {
 
 td {
   padding-right: 8px;
+}
+
+.photo-td {
+  width: 240px;
+}
+
+.contact-td {
+  padding: 0;
+}
+
+.submit-button {
+  margin-top: 12px;
+}
+
+.mat-mdc-raised-button[disabled] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.harrys-photo {
+  max-width: 200px;
+  border-radius: 8px;
+}
+
+.icon {
+  max-width: 16px;
+  display: inline;
+  vertical-align: middle;
+  padding-right: 6px;
+  color: #aaa;
+}
+
+.contact-div {
+  margin: 4px 0;
+}
+
+:host ::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: rgb(75, 75, 75) !important;
+}
+
+input,
+::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1; /* Firefox */
+}
+
+@media(max-width: 630px) {
+  .appraisal-section tr:not(.zip) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 480px) {
+  .appraisal-section tr {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 510px) {
+  .photo-td {
+    width: 200px;
+  }
+  
+  .harrys-photo {
+    max-width: 180px;
+  }
+}
+
+@media(max-width: 445px) {
+  .photo-td {
+    width: 185px;
+  }
+  
+  .harrys-photo {
+    max-width: 175px;
+  }
+}
+
+@media(max-width: 415px) {
+  .photo-td {
+    width: 170px;
+  }
+  
+  .harrys-photo {
+    max-width: 160px;
+  }
+}
+
+@media(max-width: 400px) {
+  .photo-td {
+    width: 160px;
+  }
+  
+  .harrys-photo {
+    max-width: 150px;
+  }
+}
+
+@media(max-width: 380px) {
+  .photo-td {
+    width: 150px;
+  }
+
+  .harrys-photo {
+    max-width: 145px;
+  }
+}
+
+@media(max-width: 370px) {
+  .photo-td {
+    width: 140px;
+  }
+
+  .harrys-photo {
+    max-width: 135px;
+  }
+}
+
+@media(max-width: 360px) {
+  .photo-td {
+    width: 130px;
+  }
+
+  .harrys-photo {
+    max-width: 130px;
+  }
 }

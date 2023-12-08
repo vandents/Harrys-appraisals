@@ -13,10 +13,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { HomeComponent } from './home/home.component';
 import { WinsComponent } from './wins/wins.component';
 import { ContactComponent } from './contact/contact.component';
+import { LazyImgDirective } from './lazy-img-directive/lazy-img.directive';
+import { ViewImageDialogComponent } from './view-image-dialog/view-image-dialog.component';
 
 
 @NgModule({
@@ -24,7 +29,9 @@ import { ContactComponent } from './contact/contact.component';
     AppComponent,
     HomeComponent,
     WinsComponent,
-    ContactComponent
+    ContactComponent,
+    LazyImgDirective,
+    ViewImageDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +42,11 @@ import { ContactComponent } from './contact/contact.component';
     MatSidenavModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    RecaptchaModule,
+    RecaptchaFormsModule,
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [
     DeviceService

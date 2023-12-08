@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
@@ -15,22 +16,28 @@ export class ContactComponent {
   vehicleZip: null | number = null;
   vehicle = '';
   details = '';
+  vin = '';
+
+  captchaResolved = false;
+
+  @HostBinding('style.display') display = 'block';
+  @HostBinding('style.max-width') maxWidth = '1000px';
 
 
-  constructor() {
+  constructor(private title: Title) {
+    this.title.setTitle("Harry's Appraisals - Contact us");
+  }
 
+
+  checkCaptcha(captchaResponse: string | null) {
+    this.captchaResolved = (captchaResponse && captchaResponse.length > 0) ? true : false
+  }
+
+  requiredFieldsPopulated(): boolean {
+    return true;
   }
 
   submit() {
-    // console.log('firstName', this.firstName);
-    // console.log('lastName', this.lastName);
-    // console.log('phone', this.phone);
-    // console.log('email', this.email);
-    // console.log('zip', this.zip);
-    // console.log('vehicleZip', this.vehicleZip);
-    // console.log('vehicle', this.vehicle);
-    // console.log('details', this.details);
-
     const templateParams = {
       first_name: this.firstName,
       last_name: this.lastName,
@@ -39,7 +46,8 @@ export class ContactComponent {
       zip: this.zip,
       vehicleZip: this.vehicleZip,
       vehicle: this.vehicle,
-      details: this.details
+      details: this.details,
+      vin: this.vin
     };
     console.log('templateParams)', templateParams)
 

@@ -1,6 +1,7 @@
 .logo {
-  width: 96px;
+  width: 145px;
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .mdc-button {
@@ -9,6 +10,23 @@
 
 .flexExpand {
   flex: 1 1 auto;
+}
+
+.mat-toolbar-row {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mat-toolbar-row * {
+  color: white !important;
+}
+
+.desktop-nav-buttons,
+.desktop-nav-buttons .mdc-button,
+.mdc-button {
+  border-color: rgba(175, 99, 65, 0.99) !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  color: white !important;
 }
 
 ul {
@@ -26,5 +44,66 @@ li {
 }
 
 .content {
-  margin: 0 64px
+  margin: 0 64px;
+  padding-top: 24px;
+}
+
+.center-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: calc(100vh - 200px);
+}
+
+.footer-wrapper {
+  margin-top: 48px;
+  // background-color: rgb(29, 59, 89);
+  background-color: rgb(75, 75, 75);
+  background-color: #af6341;
+  width: 100%;
+}
+
+.max-width {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer {
+  // background-color: rgb(29, 59, 89);
+  background-color: rgb(75, 75, 75);
+  background-color: #af6341;
+  color: white;
+  padding: 16px 8px;
+  width: calc(100% - 32px);
+}
+
+.mdc-icon-button {
+  margin-right: 16px;
+}
+
+.mobile-img {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 1000px) {
+  .content {
+    margin: 0 32px;
+  }
+
+  ::ng-deep .banner {
+    margin-left: -32px !important;
+  }
+}
+
+@media(max-width: 630px) {
+  .content {
+    margin: 0 16px;
+  }
+
+  ::ng-deep .banner {
+    margin-left: -16px !important;
+  }
 }

@@ -5,5 +5,12 @@ import { Injectable } from '@angular/core';
 })
 export class DeviceService {
 
-  constructor() { }
+  width: number;
+  isMobile: boolean;
+
+  constructor() {
+    this.width = document.body.offsetWidth;
+    this.isMobile = this.width < 675;
+  }
+
 }

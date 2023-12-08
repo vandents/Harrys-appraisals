@@ -1,3 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+h1 {
+  font-size: 32px !important;
+  margin: 0 0 24px 0 !important;
+}
+
+*.mat-primary:not(mat-form-field) {
+  background-color: rgb(29, 59, 89) !important;
+}
+
+* {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+
+.mat-mdc-card-subtitle,
+.mat-mdc-card-subtitle,
+*:not(mat-toolbar>*):not(button>*):not(a>*) {
+  // color: rgb(69, 69, 69);
+  color: rgb(230, 230, 230);
+}
+
+.mat-mdc-card-subtitle {
+  color: rgba(230, 230, 230, 0.7) !important;
+}
+
+.mat-mdc-menu-content,
+.mat-mdc-card {
+  // background-color: rgb(255, 250, 240) !important;
+  background-color: rgb(75, 75, 75) !important;
+}
+
+body {
+  background-color: rgb(25, 25, 25);
+}
