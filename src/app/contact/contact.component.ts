@@ -51,7 +51,7 @@ export class ContactComponent {
       phone: this.phone,
       email: this.email,
       zip: this.zip,
-      vehicleZip: this.vehicleZip,
+      vehicle_zip: this.vehicleZip,
       vehicle: this.vehicle,
       details: this.details,
       vin: this.vin
