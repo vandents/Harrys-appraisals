@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { RecaptchaFormsModule, RecaptchaModule } from 'ng-recaptcha';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { HomeComponent } from './home/home.component';
 import { WinsComponent } from './wins/wins.component';
@@ -46,7 +47,8 @@ import { ViewImageDialogComponent } from './view-image-dialog/view-image-dialog.
     RecaptchaModule,
     RecaptchaFormsModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSnackBarModule
   ],
   providers: [
     DeviceService

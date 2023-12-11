@@ -112,5 +112,5 @@
 </re-captcha>
 
 <button mat-raised-button (click)="submit()" class="submit-button"
-  [disabled]="!captchaResolved || !requiredFieldsPopulated()"
+  [disabled]="!captchaResolved || !requiredFieldsPopulated() || appraisalSent || sendingAppraisal"
   color="accent">Request Appraisal</button>

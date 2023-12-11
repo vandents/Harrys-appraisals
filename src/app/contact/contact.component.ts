@@ -1,4 +1,5 @@
 import { Component, HostBinding } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Title } from '@angular/platform-browser';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
@@ -19,12 +20,17 @@ export class ContactComponent {
   vin = '';
 
   captchaResolved = false;
+  appraisalSent = false;
+  sendingAppraisal = false;
 
   @HostBinding('style.display') display = 'block';
   @HostBinding('style.max-width') maxWidth = '1000px';
 
 
-  constructor(private title: Title) {
+  constructor(
+    private title: Title,
+    private snackbar: MatSnackBar
+  ) {
     this.title.setTitle("Harry's Appraisals - Contact us");
   }
 
@@ -38,6 +44,7 @@ export class ContactComponent {
   }
 
   submit() {
+    this.sendingAppraisal = true;
     const templateParams = {
       first_name: this.firstName,
       last_name: this.lastName,
@@ -49,13 +56,18 @@ export class ContactComponent {
       details: this.details,
       vin: this.vin
     };
-    console.log('templateParams)', templateParams)
+    console.log('templateParams)', templateParams);
 
     emailjs.send('service_4k53gzk', 'template_mus9uuk', templateParams, 'N5zOGVMpagDbUBzCb')
-      .then(function(response: EmailJSResponseStatus) {
+      .then((response: EmailJSResponseStatus) => {
         console.log('SUCCESS!', response.status, response.text);
-      }, function(error) {
+        this.appraisalSent = true;
+        this.snackbar.open(`Appraisal request sent`, '', { duration: 4000 });
+        this.sendingAppraisal = false;
+      }, (error) => {
         console.log('FAILED...', error);
+        this.snackbar.open(`Appraisal request failed`, '', { duration: 4000 });
+        this.sendingAppraisal = false;
       });
   }
 
