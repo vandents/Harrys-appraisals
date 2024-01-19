@@ -18,7 +18,7 @@
         <span>Contact us</span>
       </a>
     </mat-menu>
-    <img src="assets/harrys-logo.png" class="logo" (click)="navigateHome()" [class.mobile-img]="deviceService.isMobile">
+    <img src="assets/harrys-logo.png" class="logo" (click)="navigateHome()" [class.mobile-img]="deviceService.isMobile" alt="Logo">
     <span *ngIf="!deviceService.isMobile" class="desktop-nav-buttons">
       <a mat-stroked-button routerLink="home" routerLinkActive="current" color="accent">Home</a>
       <a mat-stroked-button routerLink="wins" routerLinkActive="current" color="accent">Success stories</a>
@@ -28,7 +28,7 @@
     <ul style="margin-right: -16px;">
       <li>
         <a target="_blank" href="https://www.facebook.com/harrcars">
-          <img class="social-icon" src="assets/facebook.svg">
+          <img class="social-icon" src="assets/facebook.svg" alt="Facebook logo">
         </a>
       </li>
     </ul>
