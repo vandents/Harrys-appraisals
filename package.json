@@ -4,8 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build && npm run postbuild",
-    "postbuild": "node post-build.js",
+    "build": "ng build",
     "publish": "ngh --repo=https://GH_TOKEN@github.com/vandents/harrys-appraisals.git --name=\"vandents\" --email=vandents@mail.gvsu.edu --no-silent",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
