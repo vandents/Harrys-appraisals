@@ -10,7 +10,7 @@ import { DeviceService } from '../device/device.service';
 })
 export class HomeComponent {
   @HostBinding('style.display') display = 'block';
-  @HostBinding('style.max-width') maxWidth = '800px';
+  @HostBinding('style.max-width') maxWidth = '872px';
 
   constructor(
     private router: Router,
